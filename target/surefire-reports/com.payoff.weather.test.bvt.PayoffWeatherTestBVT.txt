@@ -1,0 +1,46 @@
+-------------------------------------------------------------------------------
+Test set: com.payoff.weather.test.bvt.PayoffWeatherTestBVT
+-------------------------------------------------------------------------------
+Tests run: 6, Failures: 6, Errors: 0, Skipped: 0, Time elapsed: 10.643 sec <<< FAILURE!
+checkValidWeather(com.payoff.weather.test.bvt.PayoffWeatherTestBVT)  Time elapsed: 3.194 sec  <<< FAILURE!
+java.lang.AssertionError: We expected the first day of the week to be:  Sun.  Be we got:  Wed, instead. expected [sun] but found [wed]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertEquals(Assert.java:125)
+	at org.testng.Assert.assertEquals(Assert.java:178)
+	at com.payoff.weather.test.bvt.PayoffWeatherTestBVT.checkValidWeather(PayoffWeatherTestBVT.java:76)
+checkValidWeather(com.payoff.weather.test.bvt.PayoffWeatherTestBVT)  Time elapsed: 1.007 sec  <<< FAILURE!
+java.lang.AssertionError: We expected the first day of the week to be:  Sun.  Be we got:  Wed, instead. expected [sun] but found [wed]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertEquals(Assert.java:125)
+	at org.testng.Assert.assertEquals(Assert.java:178)
+	at com.payoff.weather.test.bvt.PayoffWeatherTestBVT.checkValidWeather(PayoffWeatherTestBVT.java:76)
+checkValidWeather(com.payoff.weather.test.bvt.PayoffWeatherTestBVT)  Time elapsed: 1.193 sec  <<< FAILURE!
+java.lang.AssertionError: We expected the first day of the week to be:  Sun.  Be we got:  Wed, instead. expected [sun] but found [wed]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertEquals(Assert.java:125)
+	at org.testng.Assert.assertEquals(Assert.java:178)
+	at com.payoff.weather.test.bvt.PayoffWeatherTestBVT.checkValidWeather(PayoffWeatherTestBVT.java:76)
+checkValidWeather(com.payoff.weather.test.bvt.PayoffWeatherTestBVT)  Time elapsed: 1.055 sec  <<< FAILURE!
+java.lang.AssertionError: We expected the first day of the week to be:  Sun.  Be we got:  Wed, instead. expected [sun] but found [wed]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertEquals(Assert.java:125)
+	at org.testng.Assert.assertEquals(Assert.java:178)
+	at com.payoff.weather.test.bvt.PayoffWeatherTestBVT.checkValidWeather(PayoffWeatherTestBVT.java:76)
+checkValidWeather(com.payoff.weather.test.bvt.PayoffWeatherTestBVT)  Time elapsed: 2.094 sec  <<< FAILURE!
+java.lang.AssertionError: We expected the first day of the week to be:  Sun.  Be we got:  Wed, instead. expected [sun] but found [wed]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertEquals(Assert.java:125)
+	at org.testng.Assert.assertEquals(Assert.java:178)
+	at com.payoff.weather.test.bvt.PayoffWeatherTestBVT.checkValidWeather(PayoffWeatherTestBVT.java:76)
+checkValidWeather(com.payoff.weather.test.bvt.PayoffWeatherTestBVT)  Time elapsed: 0.938 sec  <<< FAILURE!
+java.lang.AssertionError: We expected the first day of the week to be:  Sun.  Be we got:  Wed, instead. expected [sun] but found [wed]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertEquals(Assert.java:125)
+	at org.testng.Assert.assertEquals(Assert.java:178)
+	at com.payoff.weather.test.bvt.PayoffWeatherTestBVT.checkValidWeather(PayoffWeatherTestBVT.java:76)

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="RegressionTesting_Suite" parallel="false">
+    <test name="CheckWeather" preserve-order="true">
+        <classes>
+            <class name="com.payoff.weather.test.bvt.PayoffWeatherTestBVT">
+                <methods>
+                    <include name="checkValidWeather"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
