@@ -75,7 +75,7 @@ public class PayoffWeatherTestBVT {
                 {
                     Assert.assertEquals(ParsePayoffWeatherData.getDayOfWeek(x,jsonWeatherResult).toLowerCase(),getThreeCharDayOfWeek().toLowerCase(), "We expected the first day of the week to be:  "+getThreeCharDayOfWeek()+".  Be we got:  "+ParsePayoffWeatherData.getDayOfWeek(x,jsonWeatherResult)+", instead.");
                 }
-                Assert.assertNotEquals(ParsePayoffWeatherData.getDailyHigh(x,jsonWeatherResult),"", "We have blank data for the fahrenheit high temp!");
+                Assert.assertNotEquals(ParsePayoffWeatherData.getDailyHigh(x,jsonWeatherResult),"", "We have empty data for the fahrenheit high temp!");
                 Assert.assertNotEquals(ParsePayoffWeatherData.getDailyLow(x, jsonWeatherResult),"", "We have blank data for the fahrenheit low temp!");
                 Assert.assertNotEquals(ParsePayoffWeatherData.getDailyHighC(x,jsonWeatherResult),"", "We have blank data for the celsius high temp!");
                 Assert.assertNotEquals(ParsePayoffWeatherData.getDailyLowC(x, jsonWeatherResult),"", "We have blank data for the celsius low temp!");
