@@ -29,4 +29,14 @@
             <version>2.3</version>
         </dependency>
     </dependencies>
+    <repositories>
+        <repository>
+            <id>PayoffWeatherTestLib-mvn-repo</id>
+            <url>https://raw.github.com/cirej2000/PayoffWeatherTestLibs/mvn-repo/</url>
+            <snapshots>
+                <enabled>true</enabled>
+                <updatePolicy>always</updatePolicy>
+            </snapshots>
+        </repository>
+    </repositories>
 </project>
