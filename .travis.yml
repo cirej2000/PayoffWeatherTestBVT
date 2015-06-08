@@ -1,2 +1,4 @@
 language: java
-script: mvn clean test -Dtest=PayoffWeatherTestBVT#checkValidWeather
+script:
+    jdk_switcher use oraclejdk8
+    mvn clean test -Dtest=PayoffWeatherTestBVT#checkValidWeather
