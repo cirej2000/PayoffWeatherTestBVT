@@ -11,7 +11,9 @@ import org.testng.annotations.Test;
 import org.testng.log4testng.Logger;
 
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
+import java.util.TimeZone;
 
 /**
  * Created by eric on 6/5/2015.
@@ -62,23 +64,25 @@ public class PayoffWeatherTestBVT {
     @Test(dataProvider = "good-locations-tz")
     public void checkValidWeather(String method,int expectedStatus, String city, int timeZoneOffset, int numberOfDays){
        // String jsonResult = "";
-       // log.info("Starting weather check for location = "+city);
+        log.info("Starting weather check for location = "+city);
+        System.out.println("Starting weather check for location = "+city);
+
         if (method.toLowerCase().equals("get")){
             serviceClient.get(city);
             String jsonWeatherResult = serviceClient.getResponseBody();
             Assert.assertEquals(serviceClient.getResponseStatusCode(),200);
-            Assert.assertEquals(ParsePayoffWeatherData.getResultSetSize(jsonWeatherResult),7, "We expected to see 7 elements in the result set, but only, "+ParsePayoffWeatherData.getResultSetSize(jsonWeatherResult)+", were available.");
+            Assert.assertEquals(ParsePayoffWeatherData.getResultSetSize(jsonWeatherResult),7, "For "+city+":  We expected to see 7 elements in the result set, but only, "+ParsePayoffWeatherData.getResultSetSize(jsonWeatherResult)+", were available.");
             for (int x=1;x<=7;x++)
             {
 
                 if (x==1)
                 {
-                    Assert.assertEquals(ParsePayoffWeatherData.getDayOfWeek(x,jsonWeatherResult).toLowerCase(),getThreeCharDayOfWeek().toLowerCase(), "We expected the first day of the week to be:  "+getThreeCharDayOfWeek()+".  Be we got:  "+ParsePayoffWeatherData.getDayOfWeek(x,jsonWeatherResult)+", instead.");
+                    Assert.assertEquals(ParsePayoffWeatherData.getDayOfWeek(x,jsonWeatherResult).toLowerCase(),getThreeCharDayOfWeek(timeZoneOffset).toLowerCase(), "For "+city+":  We expected the first day of the week to be:  "+getThreeCharDayOfWeek(timeZoneOffset)+".  But we got:  "+ParsePayoffWeatherData.getDayOfWeek(x,jsonWeatherResult)+", instead.");
                 }
-                Assert.assertNotEquals(ParsePayoffWeatherData.getDailyHigh(x,jsonWeatherResult),"", "We have empty data for the fahrenheit high temp!");
-                Assert.assertNotEquals(ParsePayoffWeatherData.getDailyLow(x, jsonWeatherResult),"", "We have blank data for the fahrenheit low temp!");
-                Assert.assertNotEquals(ParsePayoffWeatherData.getDailyHighC(x,jsonWeatherResult),"", "We have blank data for the celsius high temp!");
-                Assert.assertNotEquals(ParsePayoffWeatherData.getDailyLowC(x, jsonWeatherResult),"", "We have blank data for the celsius low temp!");
+                Assert.assertNotEquals(ParsePayoffWeatherData.getDailyHigh(x,jsonWeatherResult),"", "For "+city+":  We have empty data for the fahrenheit high temp!");
+                Assert.assertNotEquals(ParsePayoffWeatherData.getDailyLow(x, jsonWeatherResult),"", "For "+city+":  We have blank data for the fahrenheit low temp!");
+                Assert.assertNotEquals(ParsePayoffWeatherData.getDailyHighC(x,jsonWeatherResult),"", "For "+city+":  We have blank data for the celsius high temp!");
+                Assert.assertNotEquals(ParsePayoffWeatherData.getDailyLowC(x, jsonWeatherResult),"", "For "+city+":  We have blank data for the celsius low temp!");
             }
         }
         //log.info("CheckValidWeather for location "+city+", has passed.");
@@ -89,9 +93,15 @@ public class PayoffWeatherTestBVT {
 
     }*/
 
-    public String getThreeCharDayOfWeek()
+    public String getThreeCharDayOfWeek(int offset)
     {
-        return new SimpleDateFormat("EEE").format(new Date());
+        TimeZone tz;
+        if (offset < 0)
+            tz = TimeZone.getTimeZone("GMT-"+Math.abs(offset));
+        else
+            tz = TimeZone.getTimeZone(("GMT+"+offset));
+        Calendar rightNow = Calendar.getInstance(tz);
+        return new SimpleDateFormat("EEE").format(rightNow.getTime());
     }
 
 }
