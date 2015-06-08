@@ -1,46 +1,60 @@
 -------------------------------------------------------------------------------
 Test set: com.payoff.weather.test.bvt.PayoffWeatherTestBVT
 -------------------------------------------------------------------------------
-Tests run: 6, Failures: 6, Errors: 0, Skipped: 0, Time elapsed: 10.643 sec <<< FAILURE!
-checkValidWeather(com.payoff.weather.test.bvt.PayoffWeatherTestBVT)  Time elapsed: 3.194 sec  <<< FAILURE!
-java.lang.AssertionError: We expected the first day of the week to be:  Sun.  Be we got:  Wed, instead. expected [sun] but found [wed]
+Tests run: 13, Failures: 8, Errors: 0, Skipped: 0, Time elapsed: 16.131 sec <<< FAILURE!
+badLocationTests(com.payoff.weather.test.bvt.PayoffWeatherTestBVT)  Time elapsed: 3.248 sec  <<< FAILURE!
+org.json.JSONException: A JSONObject text must begin with '{' at 1 [character 2 line 1]
+	at org.json.JSONTokener.syntaxError(JSONTokener.java:433)
+	at org.json.JSONObject.<init>(JSONObject.java:197)
+	at org.json.JSONObject.<init>(JSONObject.java:324)
+	at com.payoff.weather.client.ParsePayoffWeatherData.getErrorMessageCode(ParsePayoffWeatherData.java:12)
+	at com.payoff.weather.test.bvt.PayoffWeatherTestBVT.badLocationTests(PayoffWeatherTestBVT.java:101)
+badLocationTests(com.payoff.weather.test.bvt.PayoffWeatherTestBVT)  Time elapsed: 0.898 sec  <<< FAILURE!
+org.json.JSONException: A JSONObject text must begin with '{' at 1 [character 2 line 1]
+	at org.json.JSONTokener.syntaxError(JSONTokener.java:433)
+	at org.json.JSONObject.<init>(JSONObject.java:197)
+	at org.json.JSONObject.<init>(JSONObject.java:324)
+	at com.payoff.weather.client.ParsePayoffWeatherData.getErrorMessageCode(ParsePayoffWeatherData.java:12)
+	at com.payoff.weather.test.bvt.PayoffWeatherTestBVT.badLocationTests(PayoffWeatherTestBVT.java:101)
+badLocationTests(com.payoff.weather.test.bvt.PayoffWeatherTestBVT)  Time elapsed: 1.112 sec  <<< FAILURE!
+org.json.JSONException: A JSONObject text must begin with '{' at 1 [character 2 line 1]
+	at org.json.JSONTokener.syntaxError(JSONTokener.java:433)
+	at org.json.JSONObject.<init>(JSONObject.java:197)
+	at org.json.JSONObject.<init>(JSONObject.java:324)
+	at com.payoff.weather.client.ParsePayoffWeatherData.getErrorMessageCode(ParsePayoffWeatherData.java:12)
+	at com.payoff.weather.test.bvt.PayoffWeatherTestBVT.badLocationTests(PayoffWeatherTestBVT.java:101)
+brokenUrlTest(com.payoff.weather.test.bvt.PayoffWeatherTestBVT)  Time elapsed: 1.081 sec  <<< FAILURE!
+org.json.JSONException: A JSONObject text must begin with '{' at 1 [character 2 line 1]
+	at org.json.JSONTokener.syntaxError(JSONTokener.java:433)
+	at org.json.JSONObject.<init>(JSONObject.java:197)
+	at org.json.JSONObject.<init>(JSONObject.java:324)
+	at com.payoff.weather.client.ParsePayoffWeatherData.getErrorMessageCode(ParsePayoffWeatherData.java:12)
+	at com.payoff.weather.test.bvt.PayoffWeatherTestBVT.brokenUrlTest(PayoffWeatherTestBVT.java:145)
+checkRestMethodCompliance(com.payoff.weather.test.bvt.PayoffWeatherTestBVT)  Time elapsed: 0.692 sec  <<< FAILURE!
+java.lang.AssertionError: For http method:  POST, we should have gotten a 405 http status code.  Instead we got:  404. expected [404] but found [405]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertEquals(Assert.java:125)
+	at org.testng.Assert.assertEquals(Assert.java:372)
+	at com.payoff.weather.test.bvt.PayoffWeatherTestBVT.checkRestMethodCompliance(PayoffWeatherTestBVT.java:122)
+checkRestMethodCompliance(com.payoff.weather.test.bvt.PayoffWeatherTestBVT)  Time elapsed: 0.574 sec  <<< FAILURE!
+java.lang.AssertionError: For http method:  PUT, we should have gotten a 405 http status code.  Instead we got:  500. expected [500] but found [405]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertEquals(Assert.java:125)
+	at org.testng.Assert.assertEquals(Assert.java:372)
+	at com.payoff.weather.test.bvt.PayoffWeatherTestBVT.checkRestMethodCompliance(PayoffWeatherTestBVT.java:122)
+checkRestMethodCompliance(com.payoff.weather.test.bvt.PayoffWeatherTestBVT)  Time elapsed: 0.58 sec  <<< FAILURE!
+java.lang.AssertionError: For http method:  DELETE, we should have gotten a 405 http status code.  Instead we got:  500. expected [500] but found [405]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertEquals(Assert.java:125)
+	at org.testng.Assert.assertEquals(Assert.java:372)
+	at com.payoff.weather.test.bvt.PayoffWeatherTestBVT.checkRestMethodCompliance(PayoffWeatherTestBVT.java:122)
+checkValidWeather(com.payoff.weather.test.bvt.PayoffWeatherTestBVT)  Time elapsed: 1.215 sec  <<< FAILURE!
+java.lang.AssertionError: For Carlsbad, NM:  We expected the first day of the week to be:  Sun.  But we got:  Sat, instead. expected [sun] but found [sat]
 	at org.testng.Assert.fail(Assert.java:94)
 	at org.testng.Assert.failNotEquals(Assert.java:496)
 	at org.testng.Assert.assertEquals(Assert.java:125)
 	at org.testng.Assert.assertEquals(Assert.java:178)
-	at com.payoff.weather.test.bvt.PayoffWeatherTestBVT.checkValidWeather(PayoffWeatherTestBVT.java:76)
-checkValidWeather(com.payoff.weather.test.bvt.PayoffWeatherTestBVT)  Time elapsed: 1.007 sec  <<< FAILURE!
-java.lang.AssertionError: We expected the first day of the week to be:  Sun.  Be we got:  Wed, instead. expected [sun] but found [wed]
-	at org.testng.Assert.fail(Assert.java:94)
-	at org.testng.Assert.failNotEquals(Assert.java:496)
-	at org.testng.Assert.assertEquals(Assert.java:125)
-	at org.testng.Assert.assertEquals(Assert.java:178)
-	at com.payoff.weather.test.bvt.PayoffWeatherTestBVT.checkValidWeather(PayoffWeatherTestBVT.java:76)
-checkValidWeather(com.payoff.weather.test.bvt.PayoffWeatherTestBVT)  Time elapsed: 1.193 sec  <<< FAILURE!
-java.lang.AssertionError: We expected the first day of the week to be:  Sun.  Be we got:  Wed, instead. expected [sun] but found [wed]
-	at org.testng.Assert.fail(Assert.java:94)
-	at org.testng.Assert.failNotEquals(Assert.java:496)
-	at org.testng.Assert.assertEquals(Assert.java:125)
-	at org.testng.Assert.assertEquals(Assert.java:178)
-	at com.payoff.weather.test.bvt.PayoffWeatherTestBVT.checkValidWeather(PayoffWeatherTestBVT.java:76)
-checkValidWeather(com.payoff.weather.test.bvt.PayoffWeatherTestBVT)  Time elapsed: 1.055 sec  <<< FAILURE!
-java.lang.AssertionError: We expected the first day of the week to be:  Sun.  Be we got:  Wed, instead. expected [sun] but found [wed]
-	at org.testng.Assert.fail(Assert.java:94)
-	at org.testng.Assert.failNotEquals(Assert.java:496)
-	at org.testng.Assert.assertEquals(Assert.java:125)
-	at org.testng.Assert.assertEquals(Assert.java:178)
-	at com.payoff.weather.test.bvt.PayoffWeatherTestBVT.checkValidWeather(PayoffWeatherTestBVT.java:76)
-checkValidWeather(com.payoff.weather.test.bvt.PayoffWeatherTestBVT)  Time elapsed: 2.094 sec  <<< FAILURE!
-java.lang.AssertionError: We expected the first day of the week to be:  Sun.  Be we got:  Wed, instead. expected [sun] but found [wed]
-	at org.testng.Assert.fail(Assert.java:94)
-	at org.testng.Assert.failNotEquals(Assert.java:496)
-	at org.testng.Assert.assertEquals(Assert.java:125)
-	at org.testng.Assert.assertEquals(Assert.java:178)
-	at com.payoff.weather.test.bvt.PayoffWeatherTestBVT.checkValidWeather(PayoffWeatherTestBVT.java:76)
-checkValidWeather(com.payoff.weather.test.bvt.PayoffWeatherTestBVT)  Time elapsed: 0.938 sec  <<< FAILURE!
-java.lang.AssertionError: We expected the first day of the week to be:  Sun.  Be we got:  Wed, instead. expected [sun] but found [wed]
-	at org.testng.Assert.fail(Assert.java:94)
-	at org.testng.Assert.failNotEquals(Assert.java:496)
-	at org.testng.Assert.assertEquals(Assert.java:125)
-	at org.testng.Assert.assertEquals(Assert.java:178)
-	at com.payoff.weather.test.bvt.PayoffWeatherTestBVT.checkValidWeather(PayoffWeatherTestBVT.java:76)
+	at com.payoff.weather.test.bvt.PayoffWeatherTestBVT.checkValidWeather(PayoffWeatherTestBVT.java:75)
