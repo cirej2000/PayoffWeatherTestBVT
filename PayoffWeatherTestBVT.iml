@@ -30,6 +30,11 @@
     <orderEntry type="library" name="Maven: com.jayway.restassured:xml-path:2.4.1" level="project" />
     <orderEntry type="library" name="Maven: org.apache.commons:commons-lang3:3.3.2" level="project" />
     <orderEntry type="library" name="Maven: org.json:json:20141113" level="project" />
+    <orderEntry type="library" name="Maven: com.github.github:site-maven-plugin:0.10" level="project" />
+    <orderEntry type="library" name="Maven: com.github.github:github-maven-core:0.10" level="project" />
+    <orderEntry type="library" name="Maven: org.codehaus.plexus:plexus-utils:3.0.1" level="project" />
+    <orderEntry type="library" name="Maven: org.eclipse.mylyn.github:org.eclipse.egit.github.core:3.1.0.201310021548-r" level="project" />
+    <orderEntry type="library" name="Maven: com.google.code.gson:gson:2.2.2" level="project" />
     <orderEntry type="library" name="Maven: org.testng:testng:6.9.4" level="project" />
     <orderEntry type="library" name="Maven: org.beanshell:bsh:2.0b4" level="project" />
     <orderEntry type="library" name="Maven: com.beust:jcommander:1.48" level="project" />
