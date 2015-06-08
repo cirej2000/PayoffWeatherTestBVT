@@ -1,3 +1,4 @@
 language: java
-script: jdk_switcher use oraclejdk8
-script: mvn test -Dtest=PayoffWeatherTestBVT#checkValidWeather
+script:
+    - jdk_switcher use oraclejdk8
+    - mvn test -Dtest=PayoffWeatherTestBVT#checkValidWeather
