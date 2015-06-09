@@ -1,0 +1,821 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="7" total="19" passed="12">
+  <reporter-output>
+  </reporter-output>
+  <suite name="com.payoff.weather.test.bvt.PayoffWeatherTestBVT" duration-ms="17070" started-at="2015-06-09T12:09:03Z" finished-at="2015-06-09T12:09:20Z">
+    <groups>
+    </groups>
+    <test name="Command line test" duration-ms="17070" started-at="2015-06-09T12:09:03Z" finished-at="2015-06-09T12:09:20Z">
+      <class name="com.payoff.weather.test.bvt.PayoffWeatherTestBVT">
+        <test-method status="PASS" signature="badAuthValue()[pri:0, instance:com.payoff.weather.test.bvt.PayoffWeatherTestBVT@506e6d5e]" name="badAuthValue" duration-ms="5409" started-at="2015-06-09T12:09:03Z" finished-at="2015-06-09T12:09:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- badAuthValue -->
+        <test-method status="PASS" signature="badLocationTests(java.lang.String, int, java.lang.String, int, java.lang.String)[pri:0, instance:com.payoff.weather.test.bvt.PayoffWeatherTestBVT@506e6d5e]" name="badLocationTests" duration-ms="494" started-at="2015-06-09T12:09:08Z" data-provider="bad-location-tests" finished-at="2015-06-09T12:09:09Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[GET]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[200]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Location not Found]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- badLocationTests -->
+        <test-method status="PASS" signature="badLocationTests(java.lang.String, int, java.lang.String, int, java.lang.String)[pri:0, instance:com.payoff.weather.test.bvt.PayoffWeatherTestBVT@506e6d5e]" name="badLocationTests" duration-ms="862" started-at="2015-06-09T12:09:09Z" data-provider="bad-location-tests" finished-at="2015-06-09T12:09:09Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[GET]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[200]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Validivostok_CA]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Location not Found]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- badLocationTests -->
+        <test-method status="FAIL" signature="badLocationTests(java.lang.String, int, java.lang.String, int, java.lang.String)[pri:0, instance:com.payoff.weather.test.bvt.PayoffWeatherTestBVT@506e6d5e]" name="badLocationTests" duration-ms="1197" started-at="2015-06-09T12:09:09Z" data-provider="bad-location-tests" finished-at="2015-06-09T12:09:11Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[GET]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[200]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[-92129]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Location not Found]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.json.JSONException">
+            <message>
+              <![CDATA[JSONObject["code"] not found.]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.json.JSONException: JSONObject["code"] not found.
+	at org.json.JSONObject.get(JSONObject.java:476)
+	at org.json.JSONObject.getInt(JSONObject.java:538)
+	at com.payoff.weather.client.ParsePayoffWeatherData.getErrorMessageCode(ParsePayoffWeatherData.java:14)
+	at com.payoff.weather.test.bvt.PayoffWeatherTestBVT.badLocationTests(PayoffWeatherTestBVT.java:121)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:659)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:845)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1153)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:771)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1199)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1124)
+	at org.testng.TestNG.run(TestNG.java:1032)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:77)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:110)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:106)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.json.JSONException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- badLocationTests -->
+        <test-method status="PASS" signature="badLocationTests(java.lang.String, int, java.lang.String, int, java.lang.String)[pri:0, instance:com.payoff.weather.test.bvt.PayoffWeatherTestBVT@506e6d5e]" name="badLocationTests" duration-ms="629" started-at="2015-06-09T12:09:11Z" data-provider="bad-location-tests" finished-at="2015-06-09T12:09:11Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[GET]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[200]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[*]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Location not Found]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- badLocationTests -->
+        <test-method status="FAIL" signature="brokenUrlTest()[pri:0, instance:com.payoff.weather.test.bvt.PayoffWeatherTestBVT@506e6d5e]" name="brokenUrlTest" duration-ms="174" started-at="2015-06-09T12:09:11Z" finished-at="2015-06-09T12:09:11Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[The error code returned from the service for an incorrect method should be:  'Some parameters required by the method are missing'. We instead got:  Some parameters required by the method are missing expected [1008] but found [Some parameters required by the method are missing]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: The error code returned from the service for an incorrect method should be:  'Some parameters required by the method are missing'. We instead got:  Some parameters required by the method are missing expected [1008] but found [Some parameters required by the method are missing]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertEquals(Assert.java:125)
+	at com.payoff.weather.test.bvt.PayoffWeatherTestBVT.brokenUrlTest(PayoffWeatherTestBVT.java:188)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:659)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:845)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1153)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:771)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1199)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1124)
+	at org.testng.TestNG.run(TestNG.java:1032)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:77)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:110)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:106)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- brokenUrlTest -->
+        <test-method status="PASS" signature="checkRestMethodCompliance(java.lang.String, int, java.lang.String, int, java.lang.String)[pri:0, instance:com.payoff.weather.test.bvt.PayoffWeatherTestBVT@506e6d5e]" name="checkRestMethodCompliance" duration-ms="275" started-at="2015-06-09T12:09:11Z" data-provider="error-message-tests" finished-at="2015-06-09T12:09:12Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[POST]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[404]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Los Angeles]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[1006]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[The method requested was not found: ""]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkRestMethodCompliance -->
+        <test-method status="FAIL" signature="checkRestMethodCompliance(java.lang.String, int, java.lang.String, int, java.lang.String)[pri:0, instance:com.payoff.weather.test.bvt.PayoffWeatherTestBVT@506e6d5e]" name="checkRestMethodCompliance" duration-ms="119" started-at="2015-06-09T12:09:12Z" data-provider="error-message-tests" finished-at="2015-06-09T12:09:12Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[PUT]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[404]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Los Angeles]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[1006]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[The method requested was not found: ""]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[For http method:  PUT, we should have gotten a 404 http status code.  Instead we got:  500. expected [404] but found [500]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: For http method:  PUT, we should have gotten a 404 http status code.  Instead we got:  500. expected [404] but found [500]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertEquals(Assert.java:125)
+	at org.testng.Assert.assertEquals(Assert.java:372)
+	at com.payoff.weather.test.bvt.PayoffWeatherTestBVT.checkRestMethodCompliance(PayoffWeatherTestBVT.java:155)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:659)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:845)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1153)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:771)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1199)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1124)
+	at org.testng.TestNG.run(TestNG.java:1032)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:77)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:110)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:106)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkRestMethodCompliance -->
+        <test-method status="FAIL" signature="checkRestMethodCompliance(java.lang.String, int, java.lang.String, int, java.lang.String)[pri:0, instance:com.payoff.weather.test.bvt.PayoffWeatherTestBVT@506e6d5e]" name="checkRestMethodCompliance" duration-ms="157" started-at="2015-06-09T12:09:12Z" data-provider="error-message-tests" finished-at="2015-06-09T12:09:12Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[DELETE]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[404]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Los Angeles]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[1006]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[The method requested was not found: ""]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[For http method:  DELETE, we should have gotten a 404 http status code.  Instead we got:  500. expected [404] but found [500]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: For http method:  DELETE, we should have gotten a 404 http status code.  Instead we got:  500. expected [404] but found [500]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertEquals(Assert.java:125)
+	at org.testng.Assert.assertEquals(Assert.java:372)
+	at com.payoff.weather.test.bvt.PayoffWeatherTestBVT.checkRestMethodCompliance(PayoffWeatherTestBVT.java:155)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:659)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:845)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1153)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:771)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1199)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1124)
+	at org.testng.TestNG.run(TestNG.java:1032)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:77)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:110)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:106)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkRestMethodCompliance -->
+        <test-method status="PASS" signature="checkValidWeather(java.lang.String, int, java.lang.String, java.lang.String, int)[pri:0, instance:com.payoff.weather.test.bvt.PayoffWeatherTestBVT@506e6d5e]" name="checkValidWeather" duration-ms="1001" started-at="2015-06-09T12:09:12Z" data-provider="good-locations-tz" finished-at="2015-06-09T12:09:13Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[GET]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[200]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Los Angeles]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[America/Los_Angeles]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[7]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkValidWeather -->
+        <test-method status="FAIL" signature="checkValidWeather(java.lang.String, int, java.lang.String, java.lang.String, int)[pri:0, instance:com.payoff.weather.test.bvt.PayoffWeatherTestBVT@506e6d5e]" name="checkValidWeather" duration-ms="854" started-at="2015-06-09T12:09:13Z" data-provider="good-locations-tz" finished-at="2015-06-09T12:09:14Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[GET]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[200]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[New York]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[America/New_York]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[7]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[For New York:  We expected the first day of the week to be:  Tue.  But we got:  Mon, instead. expected [tue] but found [mon]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: For New York:  We expected the first day of the week to be:  Tue.  But we got:  Mon, instead. expected [tue] but found [mon]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertEquals(Assert.java:125)
+	at org.testng.Assert.assertEquals(Assert.java:178)
+	at com.payoff.weather.test.bvt.PayoffWeatherTestBVT.checkValidWeather(PayoffWeatherTestBVT.java:83)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:659)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:845)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1153)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:771)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1199)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1124)
+	at org.testng.TestNG.run(TestNG.java:1032)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:77)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:110)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:106)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkValidWeather -->
+        <test-method status="PASS" signature="checkValidWeather(java.lang.String, int, java.lang.String, java.lang.String, int)[pri:0, instance:com.payoff.weather.test.bvt.PayoffWeatherTestBVT@506e6d5e]" name="checkValidWeather" duration-ms="887" started-at="2015-06-09T12:09:14Z" data-provider="good-locations-tz" finished-at="2015-06-09T12:09:15Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[GET]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[200]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[92677]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[America/Los_Angeles]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[7]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkValidWeather -->
+        <test-method status="FAIL" signature="checkValidWeather(java.lang.String, int, java.lang.String, java.lang.String, int)[pri:0, instance:com.payoff.weather.test.bvt.PayoffWeatherTestBVT@506e6d5e]" name="checkValidWeather" duration-ms="805" started-at="2015-06-09T12:09:15Z" data-provider="good-locations-tz" finished-at="2015-06-09T12:09:16Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[GET]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[200]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Guadalcanal]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Pacific/Guadalcanal]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[7]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[For Guadalcanal:  We expected the first day of the week to be:  Tue.  But we got:  Mon, instead. expected [tue] but found [mon]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: For Guadalcanal:  We expected the first day of the week to be:  Tue.  But we got:  Mon, instead. expected [tue] but found [mon]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertEquals(Assert.java:125)
+	at org.testng.Assert.assertEquals(Assert.java:178)
+	at com.payoff.weather.test.bvt.PayoffWeatherTestBVT.checkValidWeather(PayoffWeatherTestBVT.java:83)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:659)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:845)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1153)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:771)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1199)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1124)
+	at org.testng.TestNG.run(TestNG.java:1032)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:77)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:110)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:106)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkValidWeather -->
+        <test-method status="PASS" signature="checkValidWeather(java.lang.String, int, java.lang.String, java.lang.String, int)[pri:0, instance:com.payoff.weather.test.bvt.PayoffWeatherTestBVT@506e6d5e]" name="checkValidWeather" duration-ms="1159" started-at="2015-06-09T12:09:16Z" data-provider="good-locations-tz" finished-at="2015-06-09T12:09:17Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[GET]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[200]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Carlsbad, CA]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[America/Los_Angeles]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[7]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkValidWeather -->
+        <test-method status="FAIL" signature="checkValidWeather(java.lang.String, int, java.lang.String, java.lang.String, int)[pri:0, instance:com.payoff.weather.test.bvt.PayoffWeatherTestBVT@506e6d5e]" name="checkValidWeather" duration-ms="895" started-at="2015-06-09T12:09:17Z" data-provider="good-locations-tz" finished-at="2015-06-09T12:09:18Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[GET]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[200]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Carlsbad, NM]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[US/Mountain]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[7]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[For Carlsbad, NM:  We expected the first day of the week to be:  Tue.  But we got:  Mon, instead. expected [tue] but found [mon]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: For Carlsbad, NM:  We expected the first day of the week to be:  Tue.  But we got:  Mon, instead. expected [tue] but found [mon]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertEquals(Assert.java:125)
+	at org.testng.Assert.assertEquals(Assert.java:178)
+	at com.payoff.weather.test.bvt.PayoffWeatherTestBVT.checkValidWeather(PayoffWeatherTestBVT.java:83)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:659)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:845)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1153)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:771)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1199)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1124)
+	at org.testng.TestNG.run(TestNG.java:1032)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:77)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:110)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:106)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkValidWeather -->
+        <test-method status="PASS" signature="checkValidWeather(java.lang.String, int, java.lang.String, java.lang.String, int)[pri:0, instance:com.payoff.weather.test.bvt.PayoffWeatherTestBVT@506e6d5e]" name="checkValidWeather" duration-ms="996" started-at="2015-06-09T12:09:18Z" data-provider="good-locations-tz" finished-at="2015-06-09T12:09:19Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[GET]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[200]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[  Oakland]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[America/Los_Angeles]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[7]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkValidWeather -->
+        <test-method status="PASS" signature="checkValidWeather(java.lang.String, int, java.lang.String, java.lang.String, int)[pri:0, instance:com.payoff.weather.test.bvt.PayoffWeatherTestBVT@506e6d5e]" name="checkValidWeather" duration-ms="968" started-at="2015-06-09T12:09:19Z" data-provider="good-locations-tz" finished-at="2015-06-09T12:09:20Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[GET]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[200]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Oakland  ]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[America/Los_Angeles]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[7]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkValidWeather -->
+        <test-method status="PASS" signature="noAuthHeader()[pri:0, instance:com.payoff.weather.test.bvt.PayoffWeatherTestBVT@506e6d5e]" name="noAuthHeader" duration-ms="69" started-at="2015-06-09T12:09:20Z" finished-at="2015-06-09T12:09:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- noAuthHeader -->
+        <test-method status="PASS" signature="noAuthValue()[pri:0, instance:com.payoff.weather.test.bvt.PayoffWeatherTestBVT@506e6d5e]" name="noAuthValue" duration-ms="61" started-at="2015-06-09T12:09:20Z" finished-at="2015-06-09T12:09:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- noAuthValue -->
+      </class> <!-- com.payoff.weather.test.bvt.PayoffWeatherTestBVT -->
+    </test> <!-- Command line test -->
+  </suite> <!-- com.payoff.weather.test.bvt.PayoffWeatherTestBVT -->
+</testng-results>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite verbose="0" name="Failed suite [com.payoff.weather.test.bvt.PayoffWeatherTestBVT]">
+  <test name="Command line test(failed)">
+    <classes>
+      <class name="com.payoff.weather.test.bvt.PayoffWeatherTestBVT">
+        <methods>
+          <include name="brokenUrlTest"/>
+          <include name="checkRestMethodCompliance" invocation-numbers="1 2"/>
+          <include name="checkValidWeather" invocation-numbers="1 3 5"/>
+          <include name="badLocationTests" invocation-numbers="2"/>
+        </methods>
+      </class> <!-- com.payoff.weather.test.bvt.PayoffWeatherTestBVT -->
+    </classes>
+  </test> <!-- Command line test(failed) -->
+</suite> <!-- Failed suite [com.payoff.weather.test.bvt.PayoffWeatherTestBVT] -->

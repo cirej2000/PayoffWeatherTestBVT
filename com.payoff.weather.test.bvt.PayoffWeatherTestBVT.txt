@@ -1,0 +1,58 @@
+-------------------------------------------------------------------------------
+Test set: com.payoff.weather.test.bvt.PayoffWeatherTestBVT
+-------------------------------------------------------------------------------
+Tests run: 19, Failures: 7, Errors: 0, Skipped: 0, Time elapsed: 17.878 sec <<< FAILURE!
+badLocationTests(com.payoff.weather.test.bvt.PayoffWeatherTestBVT)  Time elapsed: 1.202 sec  <<< FAILURE!
+org.json.JSONException: JSONObject["code"] not found.
+	at org.json.JSONObject.get(JSONObject.java:476)
+	at org.json.JSONObject.getInt(JSONObject.java:538)
+	at com.payoff.weather.client.ParsePayoffWeatherData.getErrorMessageCode(ParsePayoffWeatherData.java:14)
+	at com.payoff.weather.test.bvt.PayoffWeatherTestBVT.badLocationTests(PayoffWeatherTestBVT.java:121)
+
+brokenUrlTest(com.payoff.weather.test.bvt.PayoffWeatherTestBVT)  Time elapsed: 0.172 sec  <<< FAILURE!
+java.lang.AssertionError: The error code returned from the service for an incorrect method should be:  'Some parameters required by the method are missing'. We instead got:  Some parameters required by the method are missing expected [1008] but found [Some parameters required by the method are missing]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertEquals(Assert.java:125)
+	at com.payoff.weather.test.bvt.PayoffWeatherTestBVT.brokenUrlTest(PayoffWeatherTestBVT.java:188)
+
+checkRestMethodCompliance(com.payoff.weather.test.bvt.PayoffWeatherTestBVT)  Time elapsed: 0.129 sec  <<< FAILURE!
+java.lang.AssertionError: For http method:  PUT, we should have gotten a 404 http status code.  Instead we got:  500. expected [404] but found [500]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertEquals(Assert.java:125)
+	at org.testng.Assert.assertEquals(Assert.java:372)
+	at com.payoff.weather.test.bvt.PayoffWeatherTestBVT.checkRestMethodCompliance(PayoffWeatherTestBVT.java:155)
+
+checkRestMethodCompliance(com.payoff.weather.test.bvt.PayoffWeatherTestBVT)  Time elapsed: 0.149 sec  <<< FAILURE!
+java.lang.AssertionError: For http method:  DELETE, we should have gotten a 404 http status code.  Instead we got:  500. expected [404] but found [500]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertEquals(Assert.java:125)
+	at org.testng.Assert.assertEquals(Assert.java:372)
+	at com.payoff.weather.test.bvt.PayoffWeatherTestBVT.checkRestMethodCompliance(PayoffWeatherTestBVT.java:155)
+
+checkValidWeather(com.payoff.weather.test.bvt.PayoffWeatherTestBVT)  Time elapsed: 0.859 sec  <<< FAILURE!
+java.lang.AssertionError: For New York:  We expected the first day of the week to be:  Tue.  But we got:  Mon, instead. expected [tue] but found [mon]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertEquals(Assert.java:125)
+	at org.testng.Assert.assertEquals(Assert.java:178)
+	at com.payoff.weather.test.bvt.PayoffWeatherTestBVT.checkValidWeather(PayoffWeatherTestBVT.java:83)
+
+checkValidWeather(com.payoff.weather.test.bvt.PayoffWeatherTestBVT)  Time elapsed: 0.814 sec  <<< FAILURE!
+java.lang.AssertionError: For Guadalcanal:  We expected the first day of the week to be:  Tue.  But we got:  Mon, instead. expected [tue] but found [mon]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertEquals(Assert.java:125)
+	at org.testng.Assert.assertEquals(Assert.java:178)
+	at com.payoff.weather.test.bvt.PayoffWeatherTestBVT.checkValidWeather(PayoffWeatherTestBVT.java:83)
+
+checkValidWeather(com.payoff.weather.test.bvt.PayoffWeatherTestBVT)  Time elapsed: 0.894 sec  <<< FAILURE!
+java.lang.AssertionError: For Carlsbad, NM:  We expected the first day of the week to be:  Tue.  But we got:  Mon, instead. expected [tue] but found [mon]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertEquals(Assert.java:125)
+	at org.testng.Assert.assertEquals(Assert.java:178)
+	at com.payoff.weather.test.bvt.PayoffWeatherTestBVT.checkValidWeather(PayoffWeatherTestBVT.java:83)
+
