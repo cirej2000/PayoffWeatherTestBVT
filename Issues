@@ -1,6 +1,6 @@
 (DONE)1.  need to fix the GMT offset logic in the code for the validlocation tests.
-2.  Add the zip code to city comparison test.
+(DONE) 2.  Add the zip code to city comparison test.
 3.  Clean up JSON parsing around responses which vary between JSONArray, JSONObject and those that might not conform to either(in PayoffWeatherTestLibs).
 4.  Clear up confusion around why the 400 error code scenario is resulting in 401 and why we are getting 404s instead of 504s when invalid requests are made in the restassured requests.
-5.  Don't forget to add the validate Assert.assertNotTrue(conditions.isNullOrEmpty()) for the validLocationTests.
+(DONE)5.  Don't forget to add the validate Assert.assertNotTrue(conditions.isNullOrEmpty()) for the validLocationTests.
 (DONE)6.  How do we access items from the travis /home/cirej2000 folder (where the test reports reside)?

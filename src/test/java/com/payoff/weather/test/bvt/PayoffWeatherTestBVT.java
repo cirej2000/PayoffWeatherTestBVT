@@ -95,11 +95,55 @@ public class PayoffWeatherTestBVT {
             //Make sure that if we have values in our temps that they are valid values and high>=low
             Assert.assertTrue(highF>=lowF, city+":  The high temperature of the day can be no lower than the low for F.");
             Assert.assertTrue(highC>=lowC, city+":  The high temperature of the day can be no lower than the low for C.");
+            Assert.assertNotEquals("",ParsePayoffWeatherData.getDaysCondition(x,jsonWeatherResult), "For "+city+", no weather conditions were available for day "+x+" in our forecast.");
         }
         log.info("Weather check for location = "+city+" Passed");
         System.out.println("Weather check for location = "+city+" Passed");
     }
 
+    /**
+     * This test will take a one zipcode city "Ladera Ranch, CA"/92694 and compare the zipcode report
+     * to the city name report and validate that they are the same.
+     */
+    @Test
+    public void cityToZipComparison() {
+        // String jsonResult = "";
+        log.info("Setting up REST client for checkValid Weather...");
+        serviceClient = new PayoffWeatherServiceClient();
+        log.info("Service client ready.  Starting test.");
+        log.info("Starting weather check for location = 'Ladera Ranch, CA'");
+        System.out.println("Starting weather check for location = 'Ladera Ranch, CA'");
+
+        serviceClient.callWeatherService("GET", "Ladera Ranch");
+        String jsonWeatherResultCity = serviceClient.getResponseBody();
+        Assert.assertEquals(200, serviceClient.getResponseStatusCode());
+        Assert.assertEquals(7, ParsePayoffWeatherData.getResultSetSize(jsonWeatherResultCity), "For Ladera Ranch:  We expected to see 7 elements in the result set, but only, " + ParsePayoffWeatherData.getResultSetSize(jsonWeatherResultCity) + ", were available.");
+
+        serviceClient.callWeatherService("GET", "92694");
+        String jsonWeatherResultZip = serviceClient.getResponseBody();
+        Assert.assertEquals(200, serviceClient.getResponseStatusCode());
+        Assert.assertEquals(7, ParsePayoffWeatherData.getResultSetSize(jsonWeatherResultZip), "For 92694:  We expected to see 7 elements in the result set, but only, " + ParsePayoffWeatherData.getResultSetSize(jsonWeatherResultZip) + ", were available.");
+
+        for (int x = 1; x <= 7; x++) {
+            Assert.assertEquals(ParsePayoffWeatherData.getDayOfWeek(x, jsonWeatherResultCity).toLowerCase(), ParsePayoffWeatherData.getDayOfWeek(x, jsonWeatherResultZip).toLowerCase(), "Ladera Ranch City and Zip Day mismatch for day "+x+".");
+            Assert.assertEquals(ParsePayoffWeatherData.getDailyHigh(x,jsonWeatherResultZip),ParsePayoffWeatherData.getDailyHigh(x,jsonWeatherResultCity),"Ladera Ranch Zip and City forecasts mismatch on the High F, for day "+x+".");
+            Assert.assertEquals(ParsePayoffWeatherData.getDailyLow(x, jsonWeatherResultZip),ParsePayoffWeatherData.getDailyLow(x, jsonWeatherResultCity),"Ladera Ranch Zip and City forecasts mismatch on the Low F, for day "+x+".");
+            Assert.assertEquals(ParsePayoffWeatherData.getDailyHighC(x, jsonWeatherResultZip),ParsePayoffWeatherData.getDailyHighC(x, jsonWeatherResultCity),"Ladera Ranch Zip and City forecasts mismatch on the High C, for day "+x+".");
+            Assert.assertEquals(ParsePayoffWeatherData.getDailyLowC(x, jsonWeatherResultZip),ParsePayoffWeatherData.getDailyLowC(x, jsonWeatherResultCity),"Ladera Ranch Zip and City forecasts mismatch on the Low C, for day "+x+".");
+            Assert.assertEquals(ParsePayoffWeatherData.getDaysCondition(x, jsonWeatherResultZip), ParsePayoffWeatherData.getDaysCondition(x, jsonWeatherResultCity), "Ladera Ranch Zip and City conditions were mismatched for day " + x + ".");
+        }
+        System.out.println("Zip to City Name Comparison Test Passed.");
+        log.info("Zip to City Name Comparison Test Passed.");
+    }
+
+    /**
+     * Checking to see that bad locations are reported as such, correctly.
+     * @param method
+     * @param expectedStatus
+     * @param city
+     * @param errorCode
+     * @param errorMessage
+     */
     @Test(dataProvider = "bad-location-tests")
     public void badLocationTests(String method, int expectedStatus, String city, int errorCode, String errorMessage){
         System.out.println("Sending through bad locations and validating the correct error code/msg");
