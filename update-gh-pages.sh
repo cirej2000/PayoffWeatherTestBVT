@@ -1,5 +1,5 @@
 echo -e "STARTING CHECK...\n"
-if [ "$TRAVIS_PULL_REQUEST" == "true" ]; then
+if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
   echo -e "Starting to update gh-pages\n"
 
   #copy data we're interested in to other place
