@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="19" failures="7" name="com.payoff.weather.test.bvt.PayoffWeatherTestBVT" time="17.463" errors="0" skipped="0">
+<testsuite tests="20" failures="8" name="com.payoff.weather.test.bvt.PayoffWeatherTestBVT" time="18.813" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="/usr/lib/jvm/java-8-oracle/jre/lib/amd64"/>
@@ -60,63 +60,63 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase classname="com.payoff.weather.test.bvt.PayoffWeatherTestBVT" name="badAuthValue" time="5.412"/>
-  <testcase classname="com.payoff.weather.test.bvt.PayoffWeatherTestBVT" name="badLocationTests" time="1.1"/>
-  <testcase classname="com.payoff.weather.test.bvt.PayoffWeatherTestBVT" name="badLocationTests" time="0.719"/>
-  <testcase classname="com.payoff.weather.test.bvt.PayoffWeatherTestBVT" name="badLocationTests" time="1.204">
+  <testcase classname="com.payoff.weather.test.bvt.PayoffWeatherTestBVT" name="badAuthValue" time="6.106"/>
+  <testcase classname="com.payoff.weather.test.bvt.PayoffWeatherTestBVT" name="badLocationTests" time="0.501"/>
+  <testcase classname="com.payoff.weather.test.bvt.PayoffWeatherTestBVT" name="badLocationTests" time="0.676"/>
+  <testcase classname="com.payoff.weather.test.bvt.PayoffWeatherTestBVT" name="badLocationTests" time="0.991">
     <failure message="JSONObject[&quot;code&quot;] not found." type="org.json.JSONException">org.json.JSONException: JSONObject[&quot;code&quot;] not found.
 	at org.json.JSONObject.get(JSONObject.java:476)
 	at org.json.JSONObject.getInt(JSONObject.java:538)
 	at com.payoff.weather.client.ParsePayoffWeatherData.getErrorMessageCode(ParsePayoffWeatherData.java:14)
-	at com.payoff.weather.test.bvt.PayoffWeatherTestBVT.badLocationTests(PayoffWeatherTestBVT.java:121)
+	at com.payoff.weather.test.bvt.PayoffWeatherTestBVT.badLocationTests(PayoffWeatherTestBVT.java:165)
 </failure>
     <system-out>Sending through bad locations and validating the correct error code/msg
-JSON String = [{&quot;day_of_week&quot;:&quot;Tue&quot;,&quot;high&quot;:&quot;82&quot;,&quot;low&quot;:&quot;67.67&quot;,&quot;high_celsius&quot;:&quot;27&quot;,&quot;low_celsius&quot;:&quot;19&quot;,&quot;condition&quot;:&quot;Mostly cloudy throughout the day.&quot;},{&quot;day_of_week&quot;:&quot;Wed&quot;,&quot;high&quot;:&quot;75.71&quot;,&quot;low&quot;:&quot;61.61&quot;,&quot;high_celsius&quot;:&quot;24&quot;,&quot;low_celsius&quot;:&quot;16&quot;,&quot;condition&quot;:&quot;Partly cloudy starting in the evening.&quot;},{&quot;day_of_week&quot;:&quot;Thu&quot;,&quot;high&quot;:&quot;74.7&quot;,&quot;low&quot;:&quot;60.45&quot;,&quot;high_celsius&quot;:&quot;23&quot;,&quot;low_celsius&quot;:&quot;15&quot;,&quot;condition&quot;:&quot;Partly cloudy in the morning.&quot;},{&quot;day_of_week&quot;:&quot;Fri&quot;,&quot;high&quot;:&quot;78.02&quot;,&quot;low&quot;:&quot;59.24&quot;,&quot;high_celsius&quot;:&quot;25&quot;,&quot;low_celsius&quot;:&quot;15&quot;,&quot;condition&quot;:&quot;Partly cloudy in the morning.&quot;},{&quot;day_of_week&quot;:&quot;Sat&quot;,&quot;high&quot;:&quot;77.88&quot;,&quot;low&quot;:&quot;63.75&quot;,&quot;high_celsius&quot;:&quot;25&quot;,&quot;low_celsius&quot;:&quot;17&quot;,&quot;condition&quot;:&quot;Clear throughout the day.&quot;},{&quot;day_of_week&quot;:&quot;Sun&quot;,&quot;high&quot;:&quot;81.71&quot;,&quot;low&quot;:&quot;63.36&quot;,&quot;high_celsius&quot;:&quot;27&quot;,&quot;low_celsius&quot;:&quot;17&quot;,&quot;condition&quot;:&quot;Clear throughout the day.&quot;},{&quot;day_of_week&quot;:&quot;Mon&quot;,&quot;high&quot;:&quot;83.26&quot;,&quot;low&quot;:&quot;62.52&quot;,&quot;high_celsius&quot;:&quot;28&quot;,&quot;low_celsius&quot;:&quot;16&quot;,&quot;condition&quot;:&quot;Clear throughout the day.&quot;}]
+JSON String = [{&quot;day_of_week&quot;:&quot;Tue&quot;,&quot;high&quot;:&quot;81.07&quot;,&quot;low&quot;:&quot;67.73&quot;,&quot;high_celsius&quot;:&quot;27&quot;,&quot;low_celsius&quot;:&quot;19&quot;,&quot;condition&quot;:&quot;Mostly cloudy throughout the day.&quot;},{&quot;day_of_week&quot;:&quot;Wed&quot;,&quot;high&quot;:&quot;75.71&quot;,&quot;low&quot;:&quot;61.61&quot;,&quot;high_celsius&quot;:&quot;24&quot;,&quot;low_celsius&quot;:&quot;16&quot;,&quot;condition&quot;:&quot;Partly cloudy starting in the evening.&quot;},{&quot;day_of_week&quot;:&quot;Thu&quot;,&quot;high&quot;:&quot;74.7&quot;,&quot;low&quot;:&quot;60.45&quot;,&quot;high_celsius&quot;:&quot;23&quot;,&quot;low_celsius&quot;:&quot;15&quot;,&quot;condition&quot;:&quot;Partly cloudy in the morning.&quot;},{&quot;day_of_week&quot;:&quot;Fri&quot;,&quot;high&quot;:&quot;78.02&quot;,&quot;low&quot;:&quot;59.24&quot;,&quot;high_celsius&quot;:&quot;25&quot;,&quot;low_celsius&quot;:&quot;15&quot;,&quot;condition&quot;:&quot;Partly cloudy in the morning.&quot;},{&quot;day_of_week&quot;:&quot;Sat&quot;,&quot;high&quot;:&quot;77.88&quot;,&quot;low&quot;:&quot;63.75&quot;,&quot;high_celsius&quot;:&quot;25&quot;,&quot;low_celsius&quot;:&quot;17&quot;,&quot;condition&quot;:&quot;Clear throughout the day.&quot;},{&quot;day_of_week&quot;:&quot;Sun&quot;,&quot;high&quot;:&quot;81.71&quot;,&quot;low&quot;:&quot;63.36&quot;,&quot;high_celsius&quot;:&quot;27&quot;,&quot;low_celsius&quot;:&quot;17&quot;,&quot;condition&quot;:&quot;Clear throughout the day.&quot;},{&quot;day_of_week&quot;:&quot;Mon&quot;,&quot;high&quot;:&quot;83.26&quot;,&quot;low&quot;:&quot;62.52&quot;,&quot;high_celsius&quot;:&quot;28&quot;,&quot;low_celsius&quot;:&quot;16&quot;,&quot;condition&quot;:&quot;Clear throughout the day.&quot;}]
 
 </system-out>
   </testcase>
-  <testcase classname="com.payoff.weather.test.bvt.PayoffWeatherTestBVT" name="badLocationTests" time="0.588"/>
-  <testcase classname="com.payoff.weather.test.bvt.PayoffWeatherTestBVT" name="brokenUrlTest" time="0.152">
+  <testcase classname="com.payoff.weather.test.bvt.PayoffWeatherTestBVT" name="badLocationTests" time="0.613"/>
+  <testcase classname="com.payoff.weather.test.bvt.PayoffWeatherTestBVT" name="brokenUrlTest" time="0.164">
     <failure message="The error code returned from the service for an incorrect method should be:  &apos;Some parameters required by the method are missing&apos;. We instead got:  Some parameters required by the method are missing expected [1008] but found [Some parameters required by the method are missing]" type="java.lang.AssertionError">java.lang.AssertionError: The error code returned from the service for an incorrect method should be:  &apos;Some parameters required by the method are missing&apos;. We instead got:  Some parameters required by the method are missing expected [1008] but found [Some parameters required by the method are missing]
 	at org.testng.Assert.fail(Assert.java:94)
 	at org.testng.Assert.failNotEquals(Assert.java:496)
 	at org.testng.Assert.assertEquals(Assert.java:125)
-	at com.payoff.weather.test.bvt.PayoffWeatherTestBVT.brokenUrlTest(PayoffWeatherTestBVT.java:188)
+	at com.payoff.weather.test.bvt.PayoffWeatherTestBVT.brokenUrlTest(PayoffWeatherTestBVT.java:232)
 </failure>
     <system-out>Testing with missing location query parameter, should get a 200 status but an error message.
 JSON String = [{&quot;message&quot;:&quot;Some parameters required by the method are missing&quot;,&quot;code&quot;:1008}]
 
 </system-out>
   </testcase>
-  <testcase classname="com.payoff.weather.test.bvt.PayoffWeatherTestBVT" name="checkRestMethodCompliance" time="0.272"/>
-  <testcase classname="com.payoff.weather.test.bvt.PayoffWeatherTestBVT" name="checkRestMethodCompliance" time="0.1">
+  <testcase classname="com.payoff.weather.test.bvt.PayoffWeatherTestBVT" name="checkRestMethodCompliance" time="0.216"/>
+  <testcase classname="com.payoff.weather.test.bvt.PayoffWeatherTestBVT" name="checkRestMethodCompliance" time="0.115">
     <failure message="For http method:  PUT, we should have gotten a 404 http status code.  Instead we got:  500. expected [404] but found [500]" type="java.lang.AssertionError">java.lang.AssertionError: For http method:  PUT, we should have gotten a 404 http status code.  Instead we got:  500. expected [404] but found [500]
 	at org.testng.Assert.fail(Assert.java:94)
 	at org.testng.Assert.failNotEquals(Assert.java:496)
 	at org.testng.Assert.assertEquals(Assert.java:125)
 	at org.testng.Assert.assertEquals(Assert.java:372)
-	at com.payoff.weather.test.bvt.PayoffWeatherTestBVT.checkRestMethodCompliance(PayoffWeatherTestBVT.java:155)
+	at com.payoff.weather.test.bvt.PayoffWeatherTestBVT.checkRestMethodCompliance(PayoffWeatherTestBVT.java:199)
 </failure>
     <system-out>Only GET should be used for this method, we&apos;ll use:  PUT, for city:  Los Angeles.
 JSON String = {&quot;message&quot;:&quot;Ops, an error occurred (╯°□°）╯&quot;}
 
 </system-out>
   </testcase>
-  <testcase classname="com.payoff.weather.test.bvt.PayoffWeatherTestBVT" name="checkRestMethodCompliance" time="0.115">
+  <testcase classname="com.payoff.weather.test.bvt.PayoffWeatherTestBVT" name="checkRestMethodCompliance" time="0.119">
     <failure message="For http method:  DELETE, we should have gotten a 404 http status code.  Instead we got:  500. expected [404] but found [500]" type="java.lang.AssertionError">java.lang.AssertionError: For http method:  DELETE, we should have gotten a 404 http status code.  Instead we got:  500. expected [404] but found [500]
 	at org.testng.Assert.fail(Assert.java:94)
 	at org.testng.Assert.failNotEquals(Assert.java:496)
 	at org.testng.Assert.assertEquals(Assert.java:125)
 	at org.testng.Assert.assertEquals(Assert.java:372)
-	at com.payoff.weather.test.bvt.PayoffWeatherTestBVT.checkRestMethodCompliance(PayoffWeatherTestBVT.java:155)
+	at com.payoff.weather.test.bvt.PayoffWeatherTestBVT.checkRestMethodCompliance(PayoffWeatherTestBVT.java:199)
 </failure>
     <system-out>Only GET should be used for this method, we&apos;ll use:  DELETE, for city:  Los Angeles.
 JSON String = {&quot;message&quot;:&quot;Ops, an error occurred (╯°□°）╯&quot;}
 
 </system-out>
   </testcase>
-  <testcase classname="com.payoff.weather.test.bvt.PayoffWeatherTestBVT" name="checkValidWeather" time="1.182"/>
-  <testcase classname="com.payoff.weather.test.bvt.PayoffWeatherTestBVT" name="checkValidWeather" time="0.903">
+  <testcase classname="com.payoff.weather.test.bvt.PayoffWeatherTestBVT" name="checkValidWeather" time="0.965"/>
+  <testcase classname="com.payoff.weather.test.bvt.PayoffWeatherTestBVT" name="checkValidWeather" time="0.911">
     <failure message="For New York:  We expected the first day of the week to be:  Tue.  But we got:  Mon, instead. expected [tue] but found [mon]" type="java.lang.AssertionError">java.lang.AssertionError: For New York:  We expected the first day of the week to be:  Tue.  But we got:  Mon, instead. expected [tue] but found [mon]
 	at org.testng.Assert.fail(Assert.java:94)
 	at org.testng.Assert.failNotEquals(Assert.java:496)
@@ -127,8 +127,8 @@ JSON String = {&quot;message&quot;:&quot;Ops, an error occurred (╯°□°）�
     <system-out>Starting weather check for location = New York
 </system-out>
   </testcase>
-  <testcase classname="com.payoff.weather.test.bvt.PayoffWeatherTestBVT" name="checkValidWeather" time="0.872"/>
-  <testcase classname="com.payoff.weather.test.bvt.PayoffWeatherTestBVT" name="checkValidWeather" time="0.735">
+  <testcase classname="com.payoff.weather.test.bvt.PayoffWeatherTestBVT" name="checkValidWeather" time="0.846"/>
+  <testcase classname="com.payoff.weather.test.bvt.PayoffWeatherTestBVT" name="checkValidWeather" time="0.905">
     <failure message="For Guadalcanal:  We expected the first day of the week to be:  Tue.  But we got:  Mon, instead. expected [tue] but found [mon]" type="java.lang.AssertionError">java.lang.AssertionError: For Guadalcanal:  We expected the first day of the week to be:  Tue.  But we got:  Mon, instead. expected [tue] but found [mon]
 	at org.testng.Assert.fail(Assert.java:94)
 	at org.testng.Assert.failNotEquals(Assert.java:496)
@@ -139,8 +139,8 @@ JSON String = {&quot;message&quot;:&quot;Ops, an error occurred (╯°□°）�
     <system-out>Starting weather check for location = Guadalcanal
 </system-out>
   </testcase>
-  <testcase classname="com.payoff.weather.test.bvt.PayoffWeatherTestBVT" name="checkValidWeather" time="0.867"/>
-  <testcase classname="com.payoff.weather.test.bvt.PayoffWeatherTestBVT" name="checkValidWeather" time="1.082">
+  <testcase classname="com.payoff.weather.test.bvt.PayoffWeatherTestBVT" name="checkValidWeather" time="0.855"/>
+  <testcase classname="com.payoff.weather.test.bvt.PayoffWeatherTestBVT" name="checkValidWeather" time="1.023">
     <failure message="For Carlsbad, NM:  We expected the first day of the week to be:  Tue.  But we got:  Mon, instead. expected [tue] but found [mon]" type="java.lang.AssertionError">java.lang.AssertionError: For Carlsbad, NM:  We expected the first day of the week to be:  Tue.  But we got:  Mon, instead. expected [tue] but found [mon]
 	at org.testng.Assert.fail(Assert.java:94)
 	at org.testng.Assert.failNotEquals(Assert.java:496)
@@ -151,8 +151,19 @@ JSON String = {&quot;message&quot;:&quot;Ops, an error occurred (╯°□°）�
     <system-out>Starting weather check for location = Carlsbad, NM
 </system-out>
   </testcase>
-  <testcase classname="com.payoff.weather.test.bvt.PayoffWeatherTestBVT" name="checkValidWeather" time="0.953"/>
-  <testcase classname="com.payoff.weather.test.bvt.PayoffWeatherTestBVT" name="checkValidWeather" time="1.092"/>
-  <testcase classname="com.payoff.weather.test.bvt.PayoffWeatherTestBVT" name="noAuthHeader" time="0.055"/>
-  <testcase classname="com.payoff.weather.test.bvt.PayoffWeatherTestBVT" name="noAuthValue" time="0.06"/>
+  <testcase classname="com.payoff.weather.test.bvt.PayoffWeatherTestBVT" name="checkValidWeather" time="0.959"/>
+  <testcase classname="com.payoff.weather.test.bvt.PayoffWeatherTestBVT" name="checkValidWeather" time="0.99"/>
+  <testcase classname="com.payoff.weather.test.bvt.PayoffWeatherTestBVT" name="cityToZipComparison" time="1.735">
+    <failure message="Ladera Ranch Zip and City forecasts mismatch on the High F, for day 1. expected [82.18] but found [82.78]" type="java.lang.AssertionError">java.lang.AssertionError: Ladera Ranch Zip and City forecasts mismatch on the High F, for day 1. expected [82.18] but found [82.78]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertEquals(Assert.java:125)
+	at org.testng.Assert.assertEquals(Assert.java:178)
+	at com.payoff.weather.test.bvt.PayoffWeatherTestBVT.cityToZipComparison(PayoffWeatherTestBVT.java:129)
+</failure>
+    <system-out>Starting weather check for location = &apos;Ladera Ranch, CA&apos;
+</system-out>
+  </testcase>
+  <testcase classname="com.payoff.weather.test.bvt.PayoffWeatherTestBVT" name="noAuthHeader" time="0.064"/>
+  <testcase classname="com.payoff.weather.test.bvt.PayoffWeatherTestBVT" name="noAuthValue" time="0.059"/>
 </testsuite>
