@@ -77,3 +77,6 @@ full mvn test command to run the BVT.
 There were some issues with the java build version and the org.json libraries, so instead of playing around with different
 versions of JDK 7, I just went up to 1.8 since it is supported on Travis.
 
+Latest TestNG status Reports available at:
+https://github.com/cirej2000/PayoffWeatherTestBVT/tree/gh-pages
+

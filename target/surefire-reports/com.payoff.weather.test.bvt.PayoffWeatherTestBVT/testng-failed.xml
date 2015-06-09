@@ -5,8 +5,10 @@
     <classes>
       <class name="com.payoff.weather.test.bvt.PayoffWeatherTestBVT">
         <methods>
-          <include name="checkValidWeather" invocation-numbers="0 1 2 3 4 5"/>
-          <include name="setClient"/>
+          <include name="brokenUrlTest"/>
+          <include name="checkRestMethodCompliance" invocation-numbers="1 2"/>
+          <include name="checkValidWeather" invocation-numbers="1 3 5"/>
+          <include name="badLocationTests" invocation-numbers="2"/>
         </methods>
       </class> <!-- com.payoff.weather.test.bvt.PayoffWeatherTestBVT -->
     </classes>
