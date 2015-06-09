@@ -3,7 +3,7 @@ if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
   echo -e "Starting to update gh-pages\n"
 
   #copy data we're interested in to other place
-  REM cp -R testng $HOME/build/cirej2000/PayoffWeatherTestBVT/target/surefire-reports
+  # cp -R testng $HOME/build/cirej2000/PayoffWeatherTestBVT/target/surefire-reports
   cp -R $HOME/build/cirej2000/PayoffWeatherTestBVT/target/surefire-reports $HOME/testng
 
   #go to home and setup git
