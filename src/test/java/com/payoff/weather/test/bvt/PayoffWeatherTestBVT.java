@@ -12,6 +12,7 @@ import org.testng.log4testng.Logger;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.GregorianCalendar;
 import java.util.TimeZone;
 
 /**
@@ -22,19 +23,23 @@ import java.util.TimeZone;
 
 public class PayoffWeatherTestBVT {
     private static final Logger log = Logger.getLogger(PayoffWeatherTestBVT.class);
+
     PayoffWeatherServiceClient serviceClient = null;
-    int highF,lowF,highC,lowC;
+
+    float highF,lowF;
+    int highC,lowC;
+
     @DataProvider(name = "good-locations-tz")
     public Object [][] testLocationsData(){
         return new Object [][]{
-                {"GET",200,"Los Angeles",-7,7},
-                {"GET",200,"New York",-4,7},
-                {"GET",200,"92677",-7,7},
-                {"GET",200,"Rawaki",13,7},
-                {"GET",200,"Carlsbad, CA",-7,7},
-                {"GET",200,"Carlsbad, NM",-6,7},
-                {"GET",200,"  Oakland",-7,7},
-                {"GET",200,"Oakland  ",-7,7}
+                {"GET",200,"Los Angeles","America/Los_Angeles",7},
+                {"GET",200,"New York","America/New_York",7},
+                {"GET",200,"92677","America/Los_Angeles",7},
+                {"GET",200,"Guadalcanal","Pacific/Guadalcanal",7},
+                {"GET",200,"Carlsbad, CA","America/Los_Angeles",7},
+                {"GET",200,"Carlsbad, NM","US/Mountain",7},
+                {"GET",200,"  Oakland","America/Los_Angeles",7},
+                {"GET",200,"Oakland  ","America/Los_Angeles",7}
         };
     }
 
@@ -54,12 +59,12 @@ public class PayoffWeatherTestBVT {
                 {"GET", 200, "Validivostok_CA", 1, "Location not Found"},
                 {"GET", 200, "-92129", 1, "Location not Found"},
                 {"GET", 200, "*", 1, "Location not Found"}
-         };
+        };
     }
 
     @Test(dataProvider = "good-locations-tz")
-    public void checkValidWeather(String method,int expectedStatus, String city, int timeZoneOffset, int numberOfDays){
-       // String jsonResult = "";
+    public void checkValidWeather(String method,int expectedStatus, String city, String timeZone, int numberOfDays){
+        // String jsonResult = "";
         log.info("Setting up REST client for checkValid Weather...");
         serviceClient = new PayoffWeatherServiceClient();
         log.info("Service client ready.  Starting test.");
@@ -75,7 +80,7 @@ public class PayoffWeatherTestBVT {
 
             if (x==1)
             {
-                Assert.assertEquals(ParsePayoffWeatherData.getDayOfWeek(x,jsonWeatherResult).toLowerCase(),getThreeCharDayOfWeek(timeZoneOffset).toLowerCase(), "For "+city+":  We expected the first day of the week to be:  "+getThreeCharDayOfWeek(timeZoneOffset)+".  But we got:  "+ParsePayoffWeatherData.getDayOfWeek(x,jsonWeatherResult)+", instead.");
+                Assert.assertEquals(ParsePayoffWeatherData.getDayOfWeek(x,jsonWeatherResult).toLowerCase(),getThreeCharDayOfWeek(timeZone).toLowerCase(), "For "+city+":  We expected the first day of the week to be:  "+getThreeCharDayOfWeek(timeZone)+".  But we got:  "+ParsePayoffWeatherData.getDayOfWeek(x,jsonWeatherResult)+", instead.");
             }
 
             Assert.assertNotEquals("",ParsePayoffWeatherData.getDailyHigh(x,jsonWeatherResult),"For "+city+":  We have empty data for the fahrenheit high temp!");
@@ -83,15 +88,13 @@ public class PayoffWeatherTestBVT {
             Assert.assertNotEquals("",ParsePayoffWeatherData.getDailyHighC(x,jsonWeatherResult),"For "+city+":  We have blank data for the celsius high temp!");
             Assert.assertNotEquals("",ParsePayoffWeatherData.getDailyLowC(x, jsonWeatherResult),"For "+city+":  We have blank data for the celsius low temp!");
 
-            highF = Integer.parseInt(ParsePayoffWeatherData.getDailyHigh(x,jsonWeatherResult));
-            lowF = Integer.parseInt(ParsePayoffWeatherData.getDailyLow(x, jsonWeatherResult));
+            highF = Float.parseFloat(ParsePayoffWeatherData.getDailyHigh(x, jsonWeatherResult));
+            lowF = Float.parseFloat(ParsePayoffWeatherData.getDailyLow(x, jsonWeatherResult));
             highC = Integer.parseInt(ParsePayoffWeatherData.getDailyHighC(x, jsonWeatherResult));
             lowF = Integer.parseInt(ParsePayoffWeatherData.getDailyLowC(x, jsonWeatherResult));
-                    //Make sure that if we have values in our temps that they are valid values and high>=low
-            Assert.assertTrue(highF>=lowF, "The high temperature of the day can be no lower than the low for F.");
-            Assert.assertTrue(highC>=lowC, "The high temperature of the day can be no lower than the low for C.");
-            Assert.assertNotEquals(highC,highF, "Fahrenheit high and Celsius High should be different values.");
-            Assert.assertNotEquals(lowC,lowF, "Fahrenheit low and Celsius low should be different values.");
+            //Make sure that if we have values in our temps that they are valid values and high>=low
+            Assert.assertTrue(highF>=lowF, city+":  The high temperature of the day can be no lower than the low for F.");
+            Assert.assertTrue(highC>=lowC, city+":  The high temperature of the day can be no lower than the low for C.");
         }
         log.info("Weather check for location = "+city+" Passed");
         System.out.println("Weather check for location = "+city+" Passed");
@@ -135,29 +138,29 @@ public class PayoffWeatherTestBVT {
      */
     @Test(dataProvider = "error-message-tests")
     public void checkRestMethodCompliance(String method, int expectedStatus, String city, int errorCode, String errorMessage){
-            System.out.println("Only GET should be used for this method, we'll use:  "+method+", for city:  "+city+".");
-            log.info("Only GET should be used for this method, we'll use:  "+method+", for city:  "+city+".");
-            log.info("Setting up REST client for checkRestMethodCompliance...");
-            serviceClient = new PayoffWeatherServiceClient();
-            log.info("Service client ready.  Starting test.");
+        System.out.println("Only GET should be used for this method, we'll use:  "+method+", for city:  "+city+".");
+        log.info("Only GET should be used for this method, we'll use:  "+method+", for city:  "+city+".");
+        log.info("Setting up REST client for checkRestMethodCompliance...");
+        serviceClient = new PayoffWeatherServiceClient();
+        log.info("Service client ready.  Starting test.");
 
-            serviceClient.callWeatherService(method,city);
+        serviceClient.callWeatherService(method,city);
 
-            String jsonWeatherResult = serviceClient.getResponseBody();
+        String jsonWeatherResult = serviceClient.getResponseBody();
 
-            System.out.println("JSON String = "+jsonWeatherResult);
-            System.out.println();
-            int statusCode = serviceClient.getResponseStatusCode();
+        System.out.println("JSON String = "+jsonWeatherResult);
+        System.out.println();
+        int statusCode = serviceClient.getResponseStatusCode();
 
-            Assert.assertEquals(statusCode,expectedStatus,"For http method:  "+method+ ", we should have gotten a "+expectedStatus+" http status code.  Instead we got:  "+statusCode+".");
-            //shoulda just made this method return the object and let the test do it
-            int errCode = ParsePayoffWeatherData.getErrorMessageCode(jsonWeatherResult);
-            Assert.assertEquals(errCode,errorCode,"The error code returned from the service for an incorrect method should be:  "+errorCode+". We instead got:  "+errCode);
-            String errMessage = ParsePayoffWeatherData.getErrorMessage(jsonWeatherResult);
-            Assert.assertEquals(errMessage,errorMessage,"The error code returned from the service for an incorrect method should be:  "+errorMessage+". We instead got:  "+errMessage);
+        Assert.assertEquals(statusCode,expectedStatus,"For http method:  "+method+ ", we should have gotten a "+expectedStatus+" http status code.  Instead we got:  "+statusCode+".");
+        //shoulda just made this method return the object and let the test do it
+        int errCode = ParsePayoffWeatherData.getErrorMessageCode(jsonWeatherResult);
+        Assert.assertEquals(errCode,errorCode,"The error code returned from the service for an incorrect method should be:  "+errorCode+". We instead got:  "+errCode);
+        String errMessage = ParsePayoffWeatherData.getErrorMessage(jsonWeatherResult);
+        Assert.assertEquals(errMessage,errorMessage,"The error code returned from the service for an incorrect method should be:  "+errorMessage+". We instead got:  "+errMessage);
 
-            log.info("CheckRestMethodCompliance passed for method = "+method);
-            System.out.println("CheckRestMethodCompliance passed for method = "+method);
+        log.info("CheckRestMethodCompliance passed for method = "+method);
+        System.out.println("CheckRestMethodCompliance passed for method = "+method);
     }
 
     /**
@@ -254,20 +257,18 @@ public class PayoffWeatherTestBVT {
     }
 
     /**
-     * The goal of this method is to "attempt" to get the current time in GMT and adjust it by the
-     * specified hour offset using the TimeZone object to set the zone and then extract witht he SDF.
-     * @param offset
-     * @return
+     * The goal of this method is to get the current day in the locale for which we're getting our weather.
+     * @param timeZone - the textual name of the java recognized timezone
+     * @return - a three char representation of the day of the week.
      */
-    public String getThreeCharDayOfWeek(int offset)
+    public String getThreeCharDayOfWeek(String timeZone)
     {
-        TimeZone tz;
-        if (offset < 0)
-            tz = TimeZone.getTimeZone("GMT-"+Integer.toString(Math.abs(offset)));
-        else
-            tz = TimeZone.getTimeZone(("GMT+"+Integer.toString(offset)));
-        Calendar rightNow = Calendar.getInstance(tz);
-        return new SimpleDateFormat("EEE").format(rightNow.getTime());
-    }
+        String[] days = {"Sun","Mon","Tue","Wed","Thu","Fri","Sat"};
+        TimeZone tz = TimeZone.getTimeZone(timeZone);
+        Calendar calendar = new GregorianCalendar();
+        calendar.setTimeZone(tz);
 
+        //First day of the week is Sun at number 1, but it's 0 in the array, so we'll adjust.
+        return days[calendar.get(Calendar.DAY_OF_WEEK)-1];
+    }
 }
