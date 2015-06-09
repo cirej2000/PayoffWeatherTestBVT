@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="8" total="20" passed="12">
   <reporter-output>
   </reporter-output>
-  <suite name="com.payoff.weather.test.bvt.PayoffWeatherTestBVT" duration-ms="18836" started-at="2015-06-09T12:49:17Z" finished-at="2015-06-09T12:49:36Z">
+  <suite name="com.payoff.weather.test.bvt.PayoffWeatherTestBVT" duration-ms="22336" started-at="2015-06-09T12:52:47Z" finished-at="2015-06-09T12:53:09Z">
     <groups>
     </groups>
-    <test name="Command line test" duration-ms="18836" started-at="2015-06-09T12:49:17Z" finished-at="2015-06-09T12:49:36Z">
+    <test name="Command line test" duration-ms="22336" started-at="2015-06-09T12:52:47Z" finished-at="2015-06-09T12:53:09Z">
       <class name="com.payoff.weather.test.bvt.PayoffWeatherTestBVT">
-        <test-method status="PASS" signature="badAuthValue()[pri:0, instance:com.payoff.weather.test.bvt.PayoffWeatherTestBVT@506e6d5e]" name="badAuthValue" duration-ms="6105" started-at="2015-06-09T12:49:17Z" finished-at="2015-06-09T12:49:23Z">
+        <test-method status="PASS" signature="badAuthValue()[pri:0, instance:com.payoff.weather.test.bvt.PayoffWeatherTestBVT@506e6d5e]" name="badAuthValue" duration-ms="5842" started-at="2015-06-09T12:52:47Z" finished-at="2015-06-09T12:52:53Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- badAuthValue -->
-        <test-method status="PASS" signature="badLocationTests(java.lang.String, int, java.lang.String, int, java.lang.String)[pri:0, instance:com.payoff.weather.test.bvt.PayoffWeatherTestBVT@506e6d5e]" name="badLocationTests" duration-ms="502" started-at="2015-06-09T12:49:23Z" data-provider="bad-location-tests" finished-at="2015-06-09T12:49:24Z">
+        <test-method status="PASS" signature="badLocationTests(java.lang.String, int, java.lang.String, int, java.lang.String)[pri:0, instance:com.payoff.weather.test.bvt.PayoffWeatherTestBVT@506e6d5e]" name="badLocationTests" duration-ms="627" started-at="2015-06-09T12:52:53Z" data-provider="bad-location-tests" finished-at="2015-06-09T12:52:53Z">
           <params>
             <param index="0">
               <value>
@@ -42,7 +42,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- badLocationTests -->
-        <test-method status="PASS" signature="badLocationTests(java.lang.String, int, java.lang.String, int, java.lang.String)[pri:0, instance:com.payoff.weather.test.bvt.PayoffWeatherTestBVT@506e6d5e]" name="badLocationTests" duration-ms="664" started-at="2015-06-09T12:49:24Z" data-provider="bad-location-tests" finished-at="2015-06-09T12:49:24Z">
+        <test-method status="PASS" signature="badLocationTests(java.lang.String, int, java.lang.String, int, java.lang.String)[pri:0, instance:com.payoff.weather.test.bvt.PayoffWeatherTestBVT@506e6d5e]" name="badLocationTests" duration-ms="893" started-at="2015-06-09T12:52:53Z" data-provider="bad-location-tests" finished-at="2015-06-09T12:52:54Z">
           <params>
             <param index="0">
               <value>
@@ -73,7 +73,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- badLocationTests -->
-        <test-method status="FAIL" signature="badLocationTests(java.lang.String, int, java.lang.String, int, java.lang.String)[pri:0, instance:com.payoff.weather.test.bvt.PayoffWeatherTestBVT@506e6d5e]" name="badLocationTests" duration-ms="986" started-at="2015-06-09T12:49:24Z" data-provider="bad-location-tests" finished-at="2015-06-09T12:49:25Z">
+        <test-method status="FAIL" signature="badLocationTests(java.lang.String, int, java.lang.String, int, java.lang.String)[pri:0, instance:com.payoff.weather.test.bvt.PayoffWeatherTestBVT@506e6d5e]" name="badLocationTests" duration-ms="1017" started-at="2015-06-09T12:52:54Z" data-provider="bad-location-tests" finished-at="2015-06-09T12:52:55Z">
           <params>
             <param index="0">
               <value>
@@ -150,7 +150,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- badLocationTests -->
-        <test-method status="PASS" signature="badLocationTests(java.lang.String, int, java.lang.String, int, java.lang.String)[pri:0, instance:com.payoff.weather.test.bvt.PayoffWeatherTestBVT@506e6d5e]" name="badLocationTests" duration-ms="609" started-at="2015-06-09T12:49:25Z" data-provider="bad-location-tests" finished-at="2015-06-09T12:49:26Z">
+        <test-method status="PASS" signature="badLocationTests(java.lang.String, int, java.lang.String, int, java.lang.String)[pri:0, instance:com.payoff.weather.test.bvt.PayoffWeatherTestBVT@506e6d5e]" name="badLocationTests" duration-ms="605" started-at="2015-06-09T12:52:55Z" data-provider="bad-location-tests" finished-at="2015-06-09T12:52:56Z">
           <params>
             <param index="0">
               <value>
@@ -181,7 +181,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- badLocationTests -->
-        <test-method status="FAIL" signature="brokenUrlTest()[pri:0, instance:com.payoff.weather.test.bvt.PayoffWeatherTestBVT@506e6d5e]" name="brokenUrlTest" duration-ms="175" started-at="2015-06-09T12:49:26Z" finished-at="2015-06-09T12:49:26Z">
+        <test-method status="FAIL" signature="brokenUrlTest()[pri:0, instance:com.payoff.weather.test.bvt.PayoffWeatherTestBVT@506e6d5e]" name="brokenUrlTest" duration-ms="122" started-at="2015-06-09T12:52:56Z" finished-at="2015-06-09T12:52:56Z">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[The error code returned from the service for an incorrect method should be:  'Some parameters required by the method are missing'. We instead got:  Some parameters required by the method are missing expected [1008] but found [Some parameters required by the method are missing]]]>
@@ -231,7 +231,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- brokenUrlTest -->
-        <test-method status="PASS" signature="checkRestMethodCompliance(java.lang.String, int, java.lang.String, int, java.lang.String)[pri:0, instance:com.payoff.weather.test.bvt.PayoffWeatherTestBVT@506e6d5e]" name="checkRestMethodCompliance" duration-ms="219" started-at="2015-06-09T12:49:26Z" data-provider="error-message-tests" finished-at="2015-06-09T12:49:26Z">
+        <test-method status="PASS" signature="checkRestMethodCompliance(java.lang.String, int, java.lang.String, int, java.lang.String)[pri:0, instance:com.payoff.weather.test.bvt.PayoffWeatherTestBVT@506e6d5e]" name="checkRestMethodCompliance" duration-ms="289" started-at="2015-06-09T12:52:56Z" data-provider="error-message-tests" finished-at="2015-06-09T12:52:56Z">
           <params>
             <param index="0">
               <value>
@@ -262,7 +262,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkRestMethodCompliance -->
-        <test-method status="FAIL" signature="checkRestMethodCompliance(java.lang.String, int, java.lang.String, int, java.lang.String)[pri:0, instance:com.payoff.weather.test.bvt.PayoffWeatherTestBVT@506e6d5e]" name="checkRestMethodCompliance" duration-ms="108" started-at="2015-06-09T12:49:26Z" data-provider="error-message-tests" finished-at="2015-06-09T12:49:26Z">
+        <test-method status="FAIL" signature="checkRestMethodCompliance(java.lang.String, int, java.lang.String, int, java.lang.String)[pri:0, instance:com.payoff.weather.test.bvt.PayoffWeatherTestBVT@506e6d5e]" name="checkRestMethodCompliance" duration-ms="112" started-at="2015-06-09T12:52:56Z" data-provider="error-message-tests" finished-at="2015-06-09T12:52:57Z">
           <params>
             <param index="0">
               <value>
@@ -340,7 +340,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkRestMethodCompliance -->
-        <test-method status="FAIL" signature="checkRestMethodCompliance(java.lang.String, int, java.lang.String, int, java.lang.String)[pri:0, instance:com.payoff.weather.test.bvt.PayoffWeatherTestBVT@506e6d5e]" name="checkRestMethodCompliance" duration-ms="122" started-at="2015-06-09T12:49:26Z" data-provider="error-message-tests" finished-at="2015-06-09T12:49:27Z">
+        <test-method status="FAIL" signature="checkRestMethodCompliance(java.lang.String, int, java.lang.String, int, java.lang.String)[pri:0, instance:com.payoff.weather.test.bvt.PayoffWeatherTestBVT@506e6d5e]" name="checkRestMethodCompliance" duration-ms="130" started-at="2015-06-09T12:52:57Z" data-provider="error-message-tests" finished-at="2015-06-09T12:52:57Z">
           <params>
             <param index="0">
               <value>
@@ -418,7 +418,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkRestMethodCompliance -->
-        <test-method status="PASS" signature="checkValidWeather(java.lang.String, int, java.lang.String, java.lang.String, int)[pri:0, instance:com.payoff.weather.test.bvt.PayoffWeatherTestBVT@506e6d5e]" name="checkValidWeather" duration-ms="974" started-at="2015-06-09T12:49:27Z" data-provider="good-locations-tz" finished-at="2015-06-09T12:49:27Z">
+        <test-method status="PASS" signature="checkValidWeather(java.lang.String, int, java.lang.String, java.lang.String, int)[pri:0, instance:com.payoff.weather.test.bvt.PayoffWeatherTestBVT@506e6d5e]" name="checkValidWeather" duration-ms="1954" started-at="2015-06-09T12:52:57Z" data-provider="good-locations-tz" finished-at="2015-06-09T12:52:59Z">
           <params>
             <param index="0">
               <value>
@@ -449,7 +449,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkValidWeather -->
-        <test-method status="FAIL" signature="checkValidWeather(java.lang.String, int, java.lang.String, java.lang.String, int)[pri:0, instance:com.payoff.weather.test.bvt.PayoffWeatherTestBVT@506e6d5e]" name="checkValidWeather" duration-ms="905" started-at="2015-06-09T12:49:27Z" data-provider="good-locations-tz" finished-at="2015-06-09T12:49:28Z">
+        <test-method status="FAIL" signature="checkValidWeather(java.lang.String, int, java.lang.String, java.lang.String, int)[pri:0, instance:com.payoff.weather.test.bvt.PayoffWeatherTestBVT@506e6d5e]" name="checkValidWeather" duration-ms="1017" started-at="2015-06-09T12:52:59Z" data-provider="good-locations-tz" finished-at="2015-06-09T12:53:00Z">
           <params>
             <param index="0">
               <value>
@@ -527,7 +527,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkValidWeather -->
-        <test-method status="PASS" signature="checkValidWeather(java.lang.String, int, java.lang.String, java.lang.String, int)[pri:0, instance:com.payoff.weather.test.bvt.PayoffWeatherTestBVT@506e6d5e]" name="checkValidWeather" duration-ms="851" started-at="2015-06-09T12:49:28Z" data-provider="good-locations-tz" finished-at="2015-06-09T12:49:29Z">
+        <test-method status="PASS" signature="checkValidWeather(java.lang.String, int, java.lang.String, java.lang.String, int)[pri:0, instance:com.payoff.weather.test.bvt.PayoffWeatherTestBVT@506e6d5e]" name="checkValidWeather" duration-ms="894" started-at="2015-06-09T12:53:00Z" data-provider="good-locations-tz" finished-at="2015-06-09T12:53:01Z">
           <params>
             <param index="0">
               <value>
@@ -558,7 +558,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkValidWeather -->
-        <test-method status="FAIL" signature="checkValidWeather(java.lang.String, int, java.lang.String, java.lang.String, int)[pri:0, instance:com.payoff.weather.test.bvt.PayoffWeatherTestBVT@506e6d5e]" name="checkValidWeather" duration-ms="905" started-at="2015-06-09T12:49:29Z" data-provider="good-locations-tz" finished-at="2015-06-09T12:49:30Z">
+        <test-method status="FAIL" signature="checkValidWeather(java.lang.String, int, java.lang.String, java.lang.String, int)[pri:0, instance:com.payoff.weather.test.bvt.PayoffWeatherTestBVT@506e6d5e]" name="checkValidWeather" duration-ms="745" started-at="2015-06-09T12:53:01Z" data-provider="good-locations-tz" finished-at="2015-06-09T12:53:01Z">
           <params>
             <param index="0">
               <value>
@@ -636,7 +636,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkValidWeather -->
-        <test-method status="PASS" signature="checkValidWeather(java.lang.String, int, java.lang.String, java.lang.String, int)[pri:0, instance:com.payoff.weather.test.bvt.PayoffWeatherTestBVT@506e6d5e]" name="checkValidWeather" duration-ms="851" started-at="2015-06-09T12:49:30Z" data-provider="good-locations-tz" finished-at="2015-06-09T12:49:31Z">
+        <test-method status="PASS" signature="checkValidWeather(java.lang.String, int, java.lang.String, java.lang.String, int)[pri:0, instance:com.payoff.weather.test.bvt.PayoffWeatherTestBVT@506e6d5e]" name="checkValidWeather" duration-ms="1160" started-at="2015-06-09T12:53:01Z" data-provider="good-locations-tz" finished-at="2015-06-09T12:53:02Z">
           <params>
             <param index="0">
               <value>
@@ -667,7 +667,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkValidWeather -->
-        <test-method status="FAIL" signature="checkValidWeather(java.lang.String, int, java.lang.String, java.lang.String, int)[pri:0, instance:com.payoff.weather.test.bvt.PayoffWeatherTestBVT@506e6d5e]" name="checkValidWeather" duration-ms="1021" started-at="2015-06-09T12:49:31Z" data-provider="good-locations-tz" finished-at="2015-06-09T12:49:32Z">
+        <test-method status="FAIL" signature="checkValidWeather(java.lang.String, int, java.lang.String, java.lang.String, int)[pri:0, instance:com.payoff.weather.test.bvt.PayoffWeatherTestBVT@506e6d5e]" name="checkValidWeather" duration-ms="905" started-at="2015-06-09T12:53:02Z" data-provider="good-locations-tz" finished-at="2015-06-09T12:53:03Z">
           <params>
             <param index="0">
               <value>
@@ -745,7 +745,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkValidWeather -->
-        <test-method status="PASS" signature="checkValidWeather(java.lang.String, int, java.lang.String, java.lang.String, int)[pri:0, instance:com.payoff.weather.test.bvt.PayoffWeatherTestBVT@506e6d5e]" name="checkValidWeather" duration-ms="963" started-at="2015-06-09T12:49:32Z" data-provider="good-locations-tz" finished-at="2015-06-09T12:49:33Z">
+        <test-method status="PASS" signature="checkValidWeather(java.lang.String, int, java.lang.String, java.lang.String, int)[pri:0, instance:com.payoff.weather.test.bvt.PayoffWeatherTestBVT@506e6d5e]" name="checkValidWeather" duration-ms="1902" started-at="2015-06-09T12:53:03Z" data-provider="good-locations-tz" finished-at="2015-06-09T12:53:05Z">
           <params>
             <param index="0">
               <value>
@@ -776,7 +776,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkValidWeather -->
-        <test-method status="PASS" signature="checkValidWeather(java.lang.String, int, java.lang.String, java.lang.String, int)[pri:0, instance:com.payoff.weather.test.bvt.PayoffWeatherTestBVT@506e6d5e]" name="checkValidWeather" duration-ms="985" started-at="2015-06-09T12:49:33Z" data-provider="good-locations-tz" finished-at="2015-06-09T12:49:34Z">
+        <test-method status="PASS" signature="checkValidWeather(java.lang.String, int, java.lang.String, java.lang.String, int)[pri:0, instance:com.payoff.weather.test.bvt.PayoffWeatherTestBVT@506e6d5e]" name="checkValidWeather" duration-ms="2142" started-at="2015-06-09T12:53:05Z" data-provider="good-locations-tz" finished-at="2015-06-09T12:53:07Z">
           <params>
             <param index="0">
               <value>
@@ -807,7 +807,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkValidWeather -->
-        <test-method status="FAIL" signature="cityToZipComparison()[pri:0, instance:com.payoff.weather.test.bvt.PayoffWeatherTestBVT@506e6d5e]" name="cityToZipComparison" duration-ms="1737" started-at="2015-06-09T12:49:34Z" finished-at="2015-06-09T12:49:36Z">
+        <test-method status="FAIL" signature="cityToZipComparison()[pri:0, instance:com.payoff.weather.test.bvt.PayoffWeatherTestBVT@506e6d5e]" name="cityToZipComparison" duration-ms="1704" started-at="2015-06-09T12:53:07Z" finished-at="2015-06-09T12:53:09Z">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[Ladera Ranch Zip and City forecasts mismatch on the High F, for day 1. expected [82.18] but found [82.78]]]>
@@ -858,11 +858,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cityToZipComparison -->
-        <test-method status="PASS" signature="noAuthHeader()[pri:0, instance:com.payoff.weather.test.bvt.PayoffWeatherTestBVT@506e6d5e]" name="noAuthHeader" duration-ms="61" started-at="2015-06-09T12:49:36Z" finished-at="2015-06-09T12:49:36Z">
+        <test-method status="PASS" signature="noAuthHeader()[pri:0, instance:com.payoff.weather.test.bvt.PayoffWeatherTestBVT@506e6d5e]" name="noAuthHeader" duration-ms="77" started-at="2015-06-09T12:53:09Z" finished-at="2015-06-09T12:53:09Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- noAuthHeader -->
-        <test-method status="PASS" signature="noAuthValue()[pri:0, instance:com.payoff.weather.test.bvt.PayoffWeatherTestBVT@506e6d5e]" name="noAuthValue" duration-ms="61" started-at="2015-06-09T12:49:36Z" finished-at="2015-06-09T12:49:36Z">
+        <test-method status="PASS" signature="noAuthValue()[pri:0, instance:com.payoff.weather.test.bvt.PayoffWeatherTestBVT@506e6d5e]" name="noAuthValue" duration-ms="101" started-at="2015-06-09T12:53:09Z" finished-at="2015-06-09T12:53:09Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- noAuthValue -->
